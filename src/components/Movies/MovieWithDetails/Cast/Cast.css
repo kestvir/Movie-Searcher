@@ -1,0 +1,10 @@
+.cast {
+    margin-top: 50px;
+}
+
+@media only screen and (max-width: 767px) {
+    .cast {
+        margin-top: 80px;
+        text-align: center;
+    }
+}

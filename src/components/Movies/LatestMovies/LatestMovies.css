@@ -1,0 +1,47 @@
+.latest-movies__movie {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+}
+
+.latest-movies__section-title {
+    color: #fff;
+}
+
+.latest-movies__movie-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: #ee6e73;
+    color: #FFF;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+
+.latest-movies__movie:hover .latest-movies__movie-info {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media only screen and (max-width: 991px) {
+    .latest-movies {
+        text-align: center;
+    }
+    .latest-movies__section-title {
+        text-align: left
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .latest-movies__section-title {
+        text-align: center;
+    }
+}

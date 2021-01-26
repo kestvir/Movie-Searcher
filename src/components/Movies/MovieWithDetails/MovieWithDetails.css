@@ -1,0 +1,9 @@
+@media only screen and (max-width: 767px) {
+    .movie-details__movie-poster {
+        order: 2;
+        text-align: center;
+    }
+    .movie-details__movie-info {
+        order: 1;
+    }
+}

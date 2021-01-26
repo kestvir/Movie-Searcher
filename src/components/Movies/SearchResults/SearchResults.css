@@ -1,0 +1,33 @@
+.search-results {
+    background: #ee6e73;
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+}
+
+.search-results__movie {
+    display: flex;
+}
+
+.search-results__movie-link {
+    color: #fff;
+}
+
+.search-results__movie-link:hover {
+    text-decoration: none;
+    color: #07f8e0;
+}
+
+.search-results__movie-info {
+    margin-top: 30px;
+    margin-left: 15px;
+}
+
+.search-results__movie-item {
+    padding: 15px;
+    transition: background-color 0.3s ease-in;
+}
+
+.search-results__movie-item:hover {
+    background-color: #a73a3e;
+}

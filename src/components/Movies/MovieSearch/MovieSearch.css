@@ -1,0 +1,113 @@
+input {
+    color: #fff;
+}
+
+.movie-search {
+    margin: 40px 0 60px 0;
+    position: relative;
+}
+
+.movie-search__input, .movie-search__question-text, .movie-search__label {
+    font-family: 'Ubuntu', sans-serif;
+    display: block;
+    margin: 10px;
+    padding-bottom: 5px;
+    border: none;
+    font-size: 22px;
+}
+
+.movie-search__input:focus {
+    outline: 0;
+}
+
+.movie-search__input {
+    font-size: 42px;
+    font-weight: 300;
+    border-radius: 2px;
+    margin: 0;
+    border: none;
+    width: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: padding-top 0.2s ease, margin-top 0.2s ease;
+    overflow-x: hidden;
+    /* Hack to make "rows" attribute apply in Firefox. */
+}
+
+.movie-search__input+.movie-search__label {
+    display: block;
+    position: relative;
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+    width: 10%;
+    border-top: 1px solid #ee6e73;
+    -webkit-transition: width 0.4s ease;
+    transition: width 0.4s ease;
+    height: 0px;
+}
+
+.movie-search__input:focus+.movie-search__label {
+    width: 100%;
+}
+
+.movie-search__input:focus, .movie-search__input:valid {
+    padding-top: 35px;
+}
+
+.movie-search__input:focus+.movie-search__label>.movie-search__question-text, .movie-search__input:valid+.movie-search__label>.movie-search__question-text {
+    top: -100px;
+    font-size: 22px;
+    color: #8F8F8F;
+}
+
+.movie-search__input:valid+.movie-search__label, textarea.question:valid+.movie-search__label {
+    border-top: 2px solid #26a69a;
+}
+
+.movie-search__input:invalid {
+    box-shadow: none;
+}
+
+.movie-search__input+.movie-search__label>.movie-search__question-text {
+    font-weight: 300;
+    margin: 0;
+    position: absolute;
+    color: #c0bfbf;
+    font-size: 48px;
+    top: -66px;
+    left: 0px;
+    z-index: -1;
+    -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+    transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+}
+
+@media only screen and (max-width: 767px) {
+    .movie-search__input+.movie-search__label>.movie-search__question-text {
+        font-size: 28px;
+        top: -46px;
+    }
+}
+
+@media only screen and (max-width: 445px) {
+    .movie-search__input+.movie-search__label>.movie-search__question-text {
+        font-size: 20px;
+        top: -36px;
+    }
+    .movie-search__input {
+        font-size: 32px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .movie-search__input+.movie-search__label>.movie-search__question-text {
+        font-size: 18px;
+        top: -32px;
+    }
+    .movie-search__input {
+        font-size: 26px;
+    }
+    .movie-search__input:focus+.movie-search__label>.movie-search__question-text, .movie-search__input:valid+.movie-search__label>.movie-search__question-text {
+        font-size: 16px;
+        top: -78px;
+    }
+}
